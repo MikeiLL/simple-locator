@@ -93,7 +93,7 @@ class FormShortcode
 	private function setOptions($options)
 	{
 		$this->options = shortcode_atts(array(
-			'distances' => '5,10,20,50,100',
+			'distances' => '5,10,20,50,101',
 			'mapheight' => '250',
 			'mapcontainer' => '.wpsl-map',
 			'resultscontainer' => '.wpsl-results',
@@ -110,7 +110,8 @@ class FormShortcode
 			'taxonomies' => '',
 			'allowemptyaddress' => 'false',
 			'resultswrapper' => ''
-		), $options);
+		), $options, 'wp_simple_locator');
+		
 	}
 
 	/**
